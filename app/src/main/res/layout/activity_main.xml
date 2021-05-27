@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="#373C91">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <TextView
+            android:id="@+id/aver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="0.00"
+            android:textColor="#A4A4A4"
+            android:textSize="45dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tofive"
+            android:textColor="#0FB9FC"
+            android:textSize="25dp"
+            android:text="До 5-ки:---"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tofour"
+            android:textColor="#0FB9FC"
+            android:textSize="25dp"
+            android:text="До 4-ки:---"/>
+
+        <TextView
+            android:id="@+id/tothree"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="До 3-ки:---"
+            android:textColor="#0FB9FC"
+            android:textSize="25dp" />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:id="@+id/tb">
+        <RelativeLayout
+            android:layout_width="340dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@drawable/rounded_tb">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tab"
+                android:gravity="center"
+                android:text="0/0"
+                android:textColor="#7886FF"
+                android:textSize="25dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17dp"
+            android:id="@+id/unlist"
+            android:gravity="center"
+            android:text="/\\"
+            android:onClick="unlistClick"
+            android:textColor="#FFFFFF"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="270dp"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="90dp"
+                android:layout_height="60dp"
+                android:layout_marginRight="90dp"
+                android:background="@drawable/rounded_mks"
+                android:onClick="five"
+                android:text="5"
+                android:textColor="#FFFFFF"
+                android:textSize="40dp" />
+
+            <Button
+                android:layout_width="90dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_mks"
+                android:onClick="four"
+                android:text="4"
+                android:textColor="#FFFFFF"
+                android:textSize="40dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="270dp"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="70dp">
+            <Button
+                android:layout_width="90dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:background="@drawable/rounded_mks"
+                android:onClick="three"
+                android:layout_marginRight="90dp"
+                android:textSize="40dp"
+                android:textColor="#FFFFFF"
+                android:text="3"/>
+            <Button
+                android:layout_width="90dp"
+                android:layout_height="60dp"
+                android:text="2"
+                android:textSize="40dp"
+                android:background="@drawable/rounded_mks"
+                android:textColor="#FFFFFF"
+                android:onClick="two"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="310dp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/rounded_del"
+                android:onClick="del"
+                android:text="Стереть"
+                android:textColor="#FFF"
+                android:textSize="15dp" />
+
+            <Button
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_del"
+                android:onClick="clear"
+                android:text="Сброить все оценки"
+                android:textColor="#FFFFFF"
+                android:textSize="15dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:textSize="20dp"
+            android:textColor="#FFF"
+            android:text="Точка округления:" />
+
+        <EditText
+            android:id="@+id/roundPoint"
+            android:layout_width="92dp"
+            android:layout_height="wrap_content"
+            android:hint=".5"
+            android:textColor="#FFF"
+            android:textColorHint="#FFF" />
+
+        <Button
+            android:id="@+id/save_btn"
+            android:layout_width="98dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/save"
+            android:onClick="round"
+            android:text="Применить" />
+    </LinearLayout>
+</LinearLayout>
